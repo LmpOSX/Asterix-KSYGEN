@@ -15,12 +15,10 @@ from pathlib import Path
 import re
 
 base_dir        = Path('.')
-template_dir    = base_dir / 'plantillas'
-specs_dir       = base_dir / 'specs'
-#specs_dir       = base_dir / 'spec_dev'
-#ksy_dir         = base_dir / 'ksy'
-ksy_dir         = base_dir / '../CTkAstMgr/ksy'
-#specs_list      = list(specs_dir.glob('cat???/cats/cat*/definition.json'))
+template_dir    = base_dir / 'templates'
+specs_dir       = base_dir / 'specs' #archivos specs creados con utilidad aspec (ver aspecs.sh)
+ksy_dir         = base_dir / 'ksy'
+#specs_list      = list(specs_dir.glob('cat???/cats/cat*/definition.json')) #old aspecs version specs structure
 specs_list      = list(specs_dir.glob('cat???/cat*.json'))
 #ksy_version     = re.search(r'(_v\d+\.\d+\.\d+)',str(Path(sys.argv[0]))).group(1) if not Path(sys.argv[0]).is_symlink() else re.search(r'(_v\d+\.\d+\.\d+)',str(Path(sys.argv[0]).readlink())).group(1)
 
